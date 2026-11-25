@@ -1,14 +1,14 @@
 module.exports = (sequelize, DataTypes) => {
-  const Komik = sequelize.define("Komik", {
+  const User = sequelize.define('User', {
     id: {
       type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      autoIncrement: true
+      unique: true
     },
     password: {
       type: DataTypes.STRING,
